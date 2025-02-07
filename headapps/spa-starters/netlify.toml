@@ -1,0 +1,14 @@
+[functions]
+directory = "proxy/src"
+node_bundler = "esbuild"
+included_files = ["proxy/dist/**"]
+
+[[redirects]]
+from = "/*"
+status = 200
+to = "/.netlify/functions/index/:splat"
+force = true
+
+[build]
+command = "npm run build"
+publish = "proxy/dist"

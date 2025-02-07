@@ -6,8 +6,12 @@ import { debug } from '@sitecore-jss/sitecore-jss';
 import { editingRouter, healthCheck } from '@sitecore-jss/sitecore-jss-proxy';
 import { config, graphQLEndpoint } from './config';
 import { personalizeHelper, personalizePlugin } from './personalize';
+import serverless from 'serverless-http';
+
 
 const server = express();
+
+export const handler = serverless(server);
 
 const {
   renderView,

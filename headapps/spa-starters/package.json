@@ -6,7 +6,9 @@
   "scripts": {
     "install-build:angular": "pnpm install && pnpm build:angular",
     "build:angular": "pnpm -F=angular-starter build",
-    "start:angular": "pnpm -F=node-xmcloud-sample start"
+    "start:angular": "pnpm -F=node-xmcloud-sample start",
+    "build": "cd ./proxy && npm run build-all && cd ..",
+    "install": "cd ./proxy && npm install && npm run install-all && cd .."
   },
   "license": "ISC",
   "packageManager": "pnpm@9.11.0",
